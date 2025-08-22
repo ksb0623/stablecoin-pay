@@ -1,0 +1,427 @@
+/* Design System for Stablecoin Commerce App */
+
+:root {
+  /* Colors */
+  --color-background: #050a0f;
+  --color-surface: #1e2327;
+  --color-primary: #04fbff;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #d9d9d9;
+  --color-text-muted: #5a5c63;
+  --color-border: #2b2b2b;
+  --color-border-light: #5a5c63;
+  
+  /* Typography */
+  --font-family-primary: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-display: 'Chakra Petch', monospace;
+  
+  /* Font Sizes */
+  --text-xs: 8px;
+  --text-sm: 12px;
+  --text-base: 14px;
+  --text-lg: 16px;
+  --text-xl: 18px;
+  --text-2xl: 22px;
+  --text-3xl: 28px;
+  
+  /* Font Weights */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 40px;
+  
+  /* Border Radius */
+  --radius-sm: 2px;
+  --radius-md: 8px;
+  --radius-lg: 100px;
+  
+  /* Layout */
+  --container-width: 375px;
+  --container-padding: 16px;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  line-height: 1.5;
+}
+
+/* Typography */
+.text-xs {
+  font-size: var(--text-xs);
+  line-height: 9.55px;
+}
+
+.text-sm {
+  font-size: var(--text-sm);
+  line-height: 14.32px;
+}
+
+.text-base {
+  font-size: var(--text-base);
+  line-height: 16.71px;
+}
+
+.text-lg {
+  font-size: var(--text-lg);
+  line-height: 22px;
+}
+
+.text-xl {
+  font-size: var(--text-xl);
+  line-height: 23.4px;
+}
+
+.text-2xl {
+  font-size: var(--text-2xl);
+  line-height: 28.6px;
+}
+
+.text-3xl {
+  font-size: var(--text-3xl);
+  line-height: 0;
+}
+
+/* Font Weights */
+.font-normal { font-weight: var(--font-normal); }
+.font-medium { font-weight: var(--font-medium); }
+.font-semibold { font-weight: var(--font-semibold); }
+.font-bold { font-weight: var(--font-bold); }
+
+/* Colors */
+.text-primary { color: var(--color-text-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-muted { color: var(--color-text-muted); }
+.text-accent { color: var(--color-primary); }
+
+/* Layout Components */
+.container {
+  width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.frame {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-family-display);
+  font-weight: var(--font-medium);
+  font-size: var(--text-xl);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+.btn-secondary {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  border: 1px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+/* Form Elements */
+.input {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-family: var(--font-family-primary);
+  font-size: var(--text-lg);
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+/* Cards */
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  border: 1px solid transparent;
+}
+
+.card-selected {
+  border-color: var(--color-primary);
+  background-color: rgba(4, 251, 255, 0.1);
+}
+
+/* Status Bar */
+.status-bar {
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+/* Bottom Sheet */
+.bottom-sheet {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border-light);
+  padding: var(--spacing-md);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Flexbox Utilities */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* Spacing Utilities */
+.p-4 { padding: var(--spacing-md); }
+.p-6 { padding: var(--spacing-lg); }
+.px-4 { padding-left: var(--spacing-md); padding-right: var(--spacing-md); }
+.py-2 { padding-top: var(--spacing-sm); padding-bottom: var(--spacing-sm); }
+.py-4 { padding-top: var(--spacing-md); padding-bottom: var(--spacing-md); }
+
+.m-4 { margin: var(--spacing-md); }
+.mt-4 { margin-top: var(--spacing-md); }
+.mb-4 { margin-bottom: var(--spacing-md); }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+/* Text Alignment */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Visibility */
+.hidden { display: none; }
+.visible { display: block; }
+
+/* Image Styles */
+.product-image {
+  width: 94px;
+  height: 94px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  border: 1px solid var(--color-border-light);
+}
+
+.product-image.selected {
+  border-color: var(--color-primary);
+}
+
+/* Check Icon */
+.check-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-primary);
+}
+
+/* Wallet Address */
+.wallet-address {
+  font-family: var(--font-family-primary);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  word-break: break-all;
+}
+
+/* Balance Display */
+.balance-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-xs) 0;
+}
+
+.balance-label {
+  color: var(--color-text-secondary);
+  font-size: var(--text-base);
+}
+
+.balance-amount {
+  color: var(--color-text-primary);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-base);
+}
+
+/* Game Selection */
+.game-option {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--color-primary);
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.game-option.selected {
+  background-color: rgba(4, 251, 255, 0.1);
+}
+
+.game-option:hover {
+  background-color: rgba(4, 251, 255, 0.05);
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.product-info {
+  text-align: center;
+  width: 100%;
+}
+
+.product-name {
+  font-weight: var(--font-semibold);
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.product-price {
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+}
+
+/* Transaction Summary */
+.transaction-summary {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-xs) 0;
+}
+
+.summary-label {
+  color: var(--color-text-primary);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-base);
+}
+
+.summary-value {
+  color: var(--color-primary);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-base);
+}
+
+.summary-currency {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  margin-left: var(--spacing-xs);
+}
+
+/* Success Animation */
+.success-icon {
+  width: 70px;
+  height: 60px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 375px) {
+  .container {
+    width: 100%;
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .product-grid {
+    gap: var(--spacing-sm);
+  }
+  
+  .product-image {
+    width: 80px;
+    height: 80px;
+  }
+} 

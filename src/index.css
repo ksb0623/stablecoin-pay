@@ -1,0 +1,9 @@
+/* 중앙 정렬 */
+#root {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  min-height: 100vh;
+  background-color: #050A0F;
+  overflow-y: auto;
+}

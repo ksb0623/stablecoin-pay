@@ -1,0 +1,64 @@
+# --- Node / package managers ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# --- Build outputs (CRA / Vite / general) ---
+build/
+dist/
+dist-ssr/
+out/
+
+# --- Caches ---
+.eslintcache
+.cache/
+.parcel-cache/
+.vite/
+.nyc_output/
+coverage/
+coverage-final.json
+
+# --- Environment files (keep example templates) ---
+.env
+.env.*
+!.env.example
+!.env.template
+
+# --- OS specifics ---
+.DS_Store
+Thumbs.db
+.Spotlight-V100
+.Trashes
+._*
+
+# --- Editors / IDEs ---
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# --- TypeScript ---
+*.tsbuildinfo
+
+# --- Storybook (if used) ---
+storybook-static/
+
+# --- HMR/temp (occasionally created) ---
+public/hot
+
+# --- Misc/temp ---
+*.pid
+*.pid.lock
+*.seed
+*.swo
+*.swp
+
+# --- Local certificates/keys (if any) ---
+*.pem
+*.key
+*.crt

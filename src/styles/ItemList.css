@@ -1,0 +1,200 @@
+/* Item List page (prefixed with il- to avoid collisions) */
+.il-container {
+  min-height: 100vh;
+  position: relative;
+  background: var(--color-background, #050A0F);
+  font-family: 'Pretendard', sans-serif;
+}
+
+/* 375px 고정 스테이지를 가운데 정렬 */
+.il-frame {
+  width: 375px;
+  min-height: 100vh;
+  margin: 0 auto;
+  position: relative; /* absolute children anchor */
+}
+
+/* Header */
+.il-header {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  top: 44px;
+  background: #050A0F;
+  border-bottom: 0.8px #2B2B2B solid;
+  overflow: hidden;
+}
+
+.il-back-btn {
+  position: absolute;
+  left: 10px;
+  top: 18px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.il-back-icon { width: 24px; height: 24px; display: block; }
+.il-back-text { color: #d9d9d9; font-size: 10px; font-weight: 400; white-space: nowrap; }
+
+.il-header-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.il-logo-image { width: 96px; height: 19px; object-fit: contain; }
+
+/* Sign In */
+.il-signin-btn { position: absolute; right: 16px; top: 16px; background: none; border: 0; cursor: pointer; }
+.il-signin-btn-text { color: #d9d9d9; font-size: 14px; font-weight: 500; }
+.il-signin-btn:hover .il-signin-btn-text { color: #04FBFF; text-decoration: underline; }
+
+/* === Game Banner (대체된 Wallet summary) === */
+.il-game-banner {
+  width: 343px;
+  height: 72px;
+  position: absolute;
+  left: 16px;
+  top: 120px;
+  background: #1E2327;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+}
+
+.il-game-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  border: 1px solid #5A5C63;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.il-game-title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+/* Items */
+.il-grid {
+  width: 343px;
+  /* 배너 높이가 72px → 120 + 72 + 16(spacing) = 208 */
+  position: absolute;
+  left: 16px;
+  top: 208px;
+  bottom: 190px; /* 하단 시트(174) + 여유 */
+  background: #1E2327;
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+.il-row { display: flex; gap: 16px; padding: 13px 14px; margin-bottom: 16px; }
+
+.il-card { width: 94px; height: 128px; position: relative; cursor: pointer; }
+
+.il-img {
+  width: 94px;
+  height: 94px;
+  padding: 8px; box-sizing: border-box;
+  border-radius: 2px; background: #0b0e13; border: 1px solid #2B2B2B;
+  overflow: hidden; position: relative;
+}
+
+/* 상품 썸네일 전용 규칙 */
+.il-img .il-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* 체크 아이콘은 코너에 작게 */
+.il-check {
+  position: absolute; top: 5px; right: 5px;
+  width: 20px; height: 20px; display: none; z-index: 10;
+}
+
+/* 선택 상태 표시 */
+.il-img.il-img-selected { border: 1px solid #04FBFF; box-shadow: inset 0 0 0 2px rgba(4, 251, 255, 0.25); }
+.il-img.il-img-selected .il-check { display: block; }
+
+.il-info { margin-top: 8px; }
+.il-name { color: #ffffff; font-size: 14px; font-weight: 600; line-height: 20px; margin-bottom: 4px; }
+.il-price { color: #ffffff; font-size: 14px; font-weight: 400; line-height: 20px; }
+
+/* Gradient above bottom sheet */
+.il-gradient {
+  position: absolute; bottom: 174px; left: 16px;
+  width: 343px; height: 20px;
+  background: linear-gradient(to bottom, transparent, #050A0F);
+  pointer-events: none;
+}
+
+/* Bottom sheet */
+.il-sheet {
+  width: 100%; height: 174px;
+  position: absolute; left: 0; bottom: 0;
+  background: #1E2327; border-top: 1px solid #5A5C63;
+}
+
+.il-selected {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 8px 16px 6px;
+}
+
+.il-selected-name { color: #04FBFF; font-size: 16px; font-weight: 600; }
+.il-selected-price { display: flex; align-items: center; gap: 8px; }
+.il-price-amount { color: #ffffff; font-size: 14px; font-weight: 600; }
+.il-price-currency { color: #d9d9d9; font-size: 12px; font-weight: 400; }
+
+/* --- ItemList Bottom sheet 버튼 스타일 --- */
+.il-checkout {
+  width: 343px;
+  height: 32px;
+  margin: 8px 16px 12px;
+  background: transparent;
+  border-radius: 100px;
+  font-size: 18px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 600;
+  transition: box-shadow .2s ease, transform .06s ease, border-color .2s ease;
+}
+
+/* 비활성화 상태: 얇고 회색 */
+.il-checkout:disabled {
+  border: 1px solid #5A5C63;
+  color: #5A5C63;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* 활성화 상태: 테두리 굵고 진하게 + 은은한 글로우 */
+.il-checkout:not(:disabled) {
+  border: 2px solid #04FBFF;            /* ★ 굵게 */
+  color: #04FBFF;
+  cursor: pointer;
+  box-shadow: 0 0 0 2px rgba(4, 251, 255, 0.25);
+}
+
+.il-checkout:not(:disabled):hover {
+  box-shadow: 0 0 0 3px rgba(4, 251, 255, 0.35);
+}
+
+.il-checkout:not(:disabled):active {
+  transform: translateY(1px);
+}

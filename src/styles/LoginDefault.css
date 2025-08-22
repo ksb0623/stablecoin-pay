@@ -1,0 +1,445 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.main-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--BG_Black, #050A0F);
+  overflow: visible;
+  position: relative;
+}
+
+.header-bar {
+  width: 375px;
+  height: 60px;
+  left: 0;
+  top: 44px;
+  position: absolute;
+  background: #050A0F;
+  overflow: hidden;
+  border-bottom: 0.80px #2B2B2B solid;
+}
+
+.header-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-image {
+  width: 96px;
+  height: 19px;
+  object-fit: contain;
+}
+
+.wallet-section {
+  width: 343px;
+  height: 202px;
+  left: 16px;
+  top: 368px;
+  position: absolute;
+  background: #1E2327;
+  overflow: visible;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  padding-top: 20px;
+  z-index: 1;
+}
+
+.disconnect-btn {
+  right: 20px;
+  top: 20px;
+  position: absolute;
+  color: #04FBFF;
+  font-size: 12px;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.disconnect-btn:hover {
+  color: #ffffff;
+}
+
+.wallet-address {
+  width: 315px;
+  height: 44px;
+  left: 14px;
+  top: 50px;
+  position: absolute;
+  background: #050A0F;
+  border-radius: 2px;
+}
+
+.wallet-address-text {
+  left: 20px;
+  top: 15px;
+  position: absolute;
+  color: #ffffff;
+  font-size: 12px;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.balance-section {
+  width: 315px;
+  height: 94px;
+  left: 14px;
+  top: 104px;
+  position: absolute;
+  background: #050A0F;
+  border-radius: 2px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+}
+
+.balance-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.balance-token {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.token-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.token-icon.axlusdc {
+  background: #FFD700;
+}
+
+.token-icon.xpla {
+  background: #04FBFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.token-name {
+  color: #d9d9d9;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+.token-amount {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+  padding-left: 12px;
+}
+
+.wallet-text {
+  left: 27px;
+  top: 97.55px;
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.wallet-icon {
+  width: 32px;
+  height: 24.55px;
+  left: 155px;
+  top: 65px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.wallet-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.game-section {
+  width: 343px;
+  height: 232px;
+  left: 16px;
+  top: 120px;
+  position: absolute;
+  background: #1E2327;
+  overflow: visible;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  z-index: 2;
+}
+
+.game-option-select {
+  position: relative;
+  width: 315px;
+  height: 40px;
+  left: 14px;
+  top: 77px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.game-option-select-bg {
+  width: 315px;
+  height: 40px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: #050A0F;
+  border-radius: 2px;
+  border: 0.80px #04FBFF solid;
+}
+
+.game-option-select-text {
+  width: 218px;
+  height: 22px;
+  left: 20px;
+  top: 9px;
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  color: #04FBFF;
+  font-size: 16px;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  line-height: 22px;
+  word-wrap: break-word;
+}
+
+.dropdown-arrow {
+  width: 18px;
+  height: 18px;
+  right: 20px;
+  top: 11px;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-arrow img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 315px;
+  background: #1E2327;
+  border: 0.80px #04FBFF solid;
+  border-radius: 2px;
+  margin-top: 2px;
+  z-index: 1000;
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdown-menu.open {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 12px 20px;
+  color: #04FBFF;
+  font-size: 16px;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(4, 251, 255, 0.1);
+}
+
+.dropdown-item:hover {
+  background: rgba(4, 251, 255, 0.1);
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.game-text {
+  left: 81px;
+  top: 48.42px;
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.game-icon {
+  width: 40px;
+  height: 23px;
+  left: 157px;
+  top: 21px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.game-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.connect-game-btn {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  left: 91px;
+  top: 150px;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 100px;
+  outline: 0.80px #04FBFF solid;
+  outline-offset: -0.80px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: inline-flex;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.connect-game-btn-text {
+  text-align: center;
+  color: #04FBFF;
+  font-size: 18px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+/* Connect Game 비활성화 상태 */
+.connect-game-btn.disabled,
+.connect-game-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  outline-color: #2B2B2B;
+}
+
+.connect-game-btn.disabled .connect-game-btn-text,
+.connect-game-btn:disabled .connect-game-btn-text {
+  color: #5A5C63;
+}
+
+.connect-wallet-btn {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 20px;
+  border-radius: 100px;
+  outline: 0.80px #04FBFF solid;
+  outline-offset: -0.80px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.connect-wallet-btn-text {
+  text-align: center;
+  color: #04FBFF;
+  font-size: 18px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+/* Continue 영역(좌표 유지) */
+.continue-section {
+  width: 343px;
+  height: 40px;
+  left: 16px;
+  top: 616px;
+  position: absolute;
+}
+
+.continue-bg {
+  width: 343px;
+  height: 40px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: #1E2327;   /* 기본: 어두운 배경 */
+  border-radius: 8px;
+}
+
+.continue-text {
+  left: 127px;
+  top: 5px;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  color: #5A5C63;        /* 기본: 비활성 톤 */
+  font-size: 22px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+/* === 활성화 시: 하늘색 배경 + 밝은 텍스트 + 손가락 커서 === */
+.continue-section.active { cursor: pointer; }
+
+.continue-section.active .continue-bg {
+  background: #04FBFF;
+}
+
+.continue-section.active .continue-text {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+/* 살짝만 호버 밝기 */
+.continue-section.active:hover .continue-bg {
+  filter: brightness(1.04);
+}

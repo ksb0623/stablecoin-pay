@@ -1,0 +1,171 @@
+/* All classes prefixed with tc- to avoid collisions */
+
+.tc-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: var(--BG_Black, #050A0F);
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 375px;
+}
+
+/* Header */
+.tc-header {
+  width: 375px;
+  height: 60px;
+  left: 0;
+  top: 44px;
+  position: absolute;
+  background: #050A0F;
+  border-bottom: 0.80px #2B2B2B solid;
+  overflow: hidden;
+}
+.tc-header-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tc-logo-image {
+  width: 96px;
+  height: 19px;
+  object-fit: contain;
+}
+
+/* Success Icon / texts */
+.tc-success-icon {
+  width: 70px;
+  height: 60px;
+  left: 152px;
+  top: 163px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tc-success-icon img { width: 100%; height: 100%; object-fit: contain; }
+
+.tc-success-message {
+  left: 24px;
+  right: 24px;
+  top: 252px;
+  position: absolute;
+  text-align: center;
+}
+.tc-success-title {
+  color: #ffffff;
+  font-size: 28px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.tc-success-subtitle {
+  color: #04FBFF;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* Item card */
+.tc-item-section {
+  width: 343px;
+  height: 110px;
+  left: 16px;
+  top: 349px;
+  position: absolute;
+  background: #1E2327;
+  border-radius: 8px;
+}
+.tc-item-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 14px;
+  margin-bottom: 10px;
+}
+.tc-item-icon { width: 26px; height: 24px; }
+.tc-item-icon img { width: 100%; height: 100%; object-fit: contain; }
+.tc-item-label { color: #ffffff; font-size: 12px; font-weight: 600; }
+.tc-divider {
+  width: 315px;
+  height: 1px;
+  background: rgba(217, 217, 217, 0.3);
+  margin: 0 14px;
+}
+.tc-item-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+}
+.tc-item-info { display: flex; align-items: center; gap: 10px; }
+.tc-item-image { width: 40px; height: 40px; border-radius: 2px; overflow: hidden; }
+.tc-item-image img { width: 100%; height: 100%; object-fit: cover; }
+.tc-item-name { color: #ffffff; font-size: 14px; font-weight: 600; }
+.tc-item-quantity { text-align: right; }
+.tc-quantity-unit { color: #d9d9d9; font-size: 12px; font-weight: 400; }
+
+/* Transaction details card */
+.tc-detail-section {
+  width: 343px;
+  left: 16px;
+  top: 469px;               /* item card 아래 */
+  position: absolute;
+  background: #1E2327;
+  border-radius: 8px;
+  padding-bottom: 8px;
+}
+.tc-detail-rows {
+  padding: 8px 14px 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tc-detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.tc-detail-key {
+  color: #c9d1d9;
+  font-size: 13px;
+  font-weight: 600;
+}
+.tc-detail-value {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: right;
+  max-width: 190px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tc-hash {
+  color: #04FBFF;
+  text-decoration: underline;
+}
+
+/* Back Button */
+.tc-back-button {
+  width: 343px;
+  height: 40px;
+  left: 16px;
+  top: 610px;              /* details 카드 아래 */
+  position: absolute;
+  background: #04FBFF;
+  border: none;
+  border-radius: 8px;
+  color: #050A0F;
+  font-size: 22px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+.tc-back-button:hover { filter: brightness(1.04); }
+.tc-back-button:active { filter: brightness(0.98); }
